@@ -1,0 +1,5 @@
+# Local editor/assistant settings: not part of the website
+.claude/
+
+# Python virtual environment: local tool only, not part of the website
+.venv/

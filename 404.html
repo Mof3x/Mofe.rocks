@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Shirli Irenimofe Williams</title>
+  <meta name="robots" content="noindex">
+  <!--
+    GitHub Pages shows this page for ANY missing URL, however deep, so relative
+    links here could break. The script below sets a <base> so every link and
+    asset resolves from the site root.
+    - Project site (username.github.io/repo-name/): detected automatically.
+    - Custom domain or a username.github.io repo: set content="/" below.
+  -->
+  <meta name="site-base" content="">
+  <script>
+    (function () {
+      var base = document.querySelector('meta[name="site-base"]').content;
+      if (!base) {
+        var seg = location.pathname.split("/")[1];
+        base = /\.github\.io$/i.test(location.hostname) && seg ? "/" + seg + "/" : "/";
+      }
+      if (location.protocol === "file:") base = "";
+      if (base) {
+        var b = document.createElement("base");
+        b.href = base;
+        document.head.appendChild(b);
+      }
+      document.documentElement.className = "js";
+      try { if (localStorage.getItem("siw-theme") === "ivory") document.documentElement.setAttribute("data-theme", "ivory"); } catch (e) {}
+    })();
+  </script>
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fallback if style.css can't load */
+    body { background: #07060b; color: #d8d3e8; font-family: ui-monospace, Consolas, monospace; }
+    a { color: #c9a45c; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="wrap" style="display:grid;place-items:center;min-height:100vh">
+    <section class="term" style="width:min(100%, 52rem)" aria-labelledby="nf-title">
+      <div class="term__bar" aria-hidden="true">
+        <span class="term__tab"><span class="term__tab-icon">&gt;_</span>pwsh<span class="term__tab-x">✕</span></span>
+        <span class="term__controls"><span>—</span><span>☐</span><span>✕</span></span>
+      </div>
+      <div class="term__body">
+        <p class="term__line"><span class="term__prompt">PS C:\Users\shirli&gt;</span> cd <span id="nf-path">this-page</span></p>
+        <p class="term__line" style="color:var(--red)">Set-Location: Cannot find path because it does not exist.</p>
+        <div class="ff" style="margin-top:1.5rem">
+          <figure class="ascii-figure" style="margin:0">
+<pre class="ascii ascii--lime" style="--ascii-size:clamp(4px,1.2vw,6.5px)" role="img" aria-label="ASCII art of a branching doum palm tree">                                                 .       -.
+                            ::                   .+:     :-
+                            :                     :-      :
+                              .                    .      .
+                  .:::-:---:-::: ...                -
+                -=--=+*=+=-=+=:-+===--=--=--=::::    -
+             .:-===-=+=-+++++=+---======-+=-++====-:  =
+           --=-====:-.  -+++==::...-*++*+#+=++=++++==--=
+         =-+==*#==:.==+ --.==::+-=- :..=-+++=++==++=+=  :
+        -=++++*+=-.-*=*-:. ---=+*=+: ::    --=++=+*+=-: -:
+  :-====+++++++:.= :=+..:=- +-:==:=- :-    -:=====*+*+-- -.
+ :--=*=::      ::-   -:  -  .-   : ::::   :::+=-+===+---  +
+ .=++++-        .=    -  -    :: :   -.   -...:++-:  ..
+  +===.:-:       :-    --       =-    :  :.             ..
+ :+===.   :.      -    :-        =     -:                 .
+:=++++: . .-=--:::-=.   -        =:   .-
+ :==-=-            .:-: -         +  --
+  .-==-               .-=.        =:=:
+                        :-        -:
+                          -     .-.
+                           -:  --
+                            -:=:
+              :-            -=.
+                            --
+                            --
+              ......  ..... --.  .::.......  .-..
+     ...:--::..:....  .::.::+=-....::::--:. ..    .. ...
+                ...::. ..:-===::.   ..  .</pre>
+            <figcaption class="ascii-caption">fig. IV · Hyphaene thebaica, doum palm · after Pococke, 1743</figcaption>
+          </figure>
+          <div>
+            <p class="hud-label">Error 404 · Lost in the grove</p>
+            <h1 id="nf-title" class="ff__name">Page not found</h1>
+            <p>The page you were looking for has moved or never existed. Try one of these instead.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="index.html">Go home</a>
+              <a class="btn" href="projects.html">Projects</a>
+              <a class="btn" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+        <p class="term__line"><span class="term__prompt">PS C:\Users\shirli&gt;</span><span class="term__cursor" aria-hidden="true"></span></p>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById("nf-path").textContent = decodeURIComponent(location.pathname);
+  </script>
+</body>
+</html>
