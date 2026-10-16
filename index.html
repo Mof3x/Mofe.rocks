@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <script>
     document.documentElement.className = "js";
-    try { if (localStorage.getItem("siw-theme") === "ivory") document.documentElement.setAttribute("data-theme", "ivory"); } catch (e) {}
+    try { if (localStorage.getItem("siw-theme") === "ivory") document.documentElement.setAttribute("data-theme", "ivory"); } catch (e) {} try { var p = localStorage.getItem("siw-plant"); if (/^(muted|bone|cyan|pink|line|gold|green|red)$/.test(p)) document.documentElement.setAttribute("data-plant", p); } catch (e) {}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Shirli Irenimofe Williams, home">
-        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-name">Shirli I. Williams</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span>Menu</button>
@@ -46,9 +46,7 @@
     <!-- Home hero: a terminal running "fastfetch". Text values come from data.js. -->
     <section class="term" data-boot aria-labelledby="hero-title">
       <div class="term__bar" aria-hidden="true">
-        <span class="term__tab"><span class="term__tab-icon">&gt;_</span>shsh<span class="term__tab-x">✕</span></span>
-        <span class="term__plus">+</span><span class="term__chev">⌄</span>
-        <span class="term__controls"><span>—</span><span>☐</span><span>✕</span></span>
+        <span class="term__tab"><span class="term__tab-icon">&gt;_</span>shsh</span>
       </div>
       <div class="term__body">
         <p class="term__line term__muted">PowerShell 7.6.6</p>
@@ -131,7 +129,7 @@
               <h2 class="ff__box-title">Status</h2>
               <dl>
                 <dt>Open to</dt><dd data-field="person.openTo"></dd>
-                <dt>CV</dt><dd><a href="assets/cv/Shirli-Irenimofe-Williams-CV.pdf" data-link="links.cv" download>download .pdf</a></dd>
+                <dt>CV</dt><dd><a href="assets/cv/Shirli_Williams_CV_Techpriv.pdf" data-link="links.cv" download>download .pdf</a></dd>
                 <dt>Contact</dt><dd><a href="contact.html">contact.html</a></dd>
               </dl>
             </div>
@@ -144,10 +142,11 @@
               </dl>
             </div>
 
-            <ul class="ff__dots" aria-hidden="true">
-              <li style="--c: var(--muted)"></li><li style="--c: var(--bone)"></li><li style="--c: var(--cyan)"></li><li style="--c: var(--pink)"></li>
-              <li style="--c: var(--line)"></li><li style="--c: var(--gold)"></li><li style="--c: var(--green)"></li><li style="--c: var(--red)"></li>
-            </ul>
+            <!-- Colour dots: each one recolours the ASCII plants on every page. Press the lit dot again to reset. -->
+            <div class="ff__dots" role="group" aria-label="Colour the ASCII plants">
+              <button type="button" class="ff__dot" data-plant="muted" style="--c: var(--muted)" aria-pressed="false" aria-label="Grey"></button><button type="button" class="ff__dot" data-plant="bone" style="--c: var(--bone)" aria-pressed="false" aria-label="Bone"></button><button type="button" class="ff__dot" data-plant="cyan" style="--c: var(--cyan)" aria-pressed="false" aria-label="Teal"></button><button type="button" class="ff__dot" data-plant="pink" style="--c: var(--pink)" aria-pressed="false" aria-label="Rose"></button>
+              <button type="button" class="ff__dot" data-plant="line" style="--c: var(--line)" aria-pressed="false" aria-label="Lavender"></button><button type="button" class="ff__dot" data-plant="gold" style="--c: var(--gold)" aria-pressed="false" aria-label="Lilac"></button><button type="button" class="ff__dot" data-plant="green" style="--c: var(--green)" aria-pressed="false" aria-label="Green"></button><button type="button" class="ff__dot" data-plant="red" style="--c: var(--red)" aria-pressed="false" aria-label="Red"></button>
+            </div>
             <p class="ff__greet" data-greeting>Thanks for stopping by.</p>
             <div class="btn-row ff__cta">
               <a class="btn btn--primary" href="projects.html">View projects <span class="arrow" aria-hidden="true">→</span></a>

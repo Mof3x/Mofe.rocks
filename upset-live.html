@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <script>
     document.documentElement.className = "js";
-    try { if (localStorage.getItem("siw-theme") === "ivory") document.documentElement.setAttribute("data-theme", "ivory"); } catch (e) {}
+    try { if (localStorage.getItem("siw-theme") === "ivory") document.documentElement.setAttribute("data-theme", "ivory"); } catch (e) {} try { var p = localStorage.getItem("siw-plant"); if (/^(muted|bone|cyan|pink|line|gold|green|red)$/.test(p)) document.documentElement.setAttribute("data-plant", p); } catch (e) {}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Shirli Irenimofe Williams, home">
-        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-name">Shirli <small>I. Williams</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span>Menu</button>

@@ -156,6 +156,37 @@
     });
   }
 
+  /* ------------------------------------------- plant colour (home-page dots) */
+
+  // The colour dots on the home page recolour the ASCII plants on every page.
+  // The choice is remembered; pressing the lit dot again resets it.
+  const PLANT_KEY = "siw-plant";
+  const PLANTS = ["muted", "bone", "cyan", "pink", "line", "gold", "green", "red"];
+  const plantDots = doc.querySelectorAll(".ff__dot[data-plant]");
+  function applyPlant(name) {
+    if (PLANTS.includes(name)) root.setAttribute("data-plant", name);
+    else root.removeAttribute("data-plant");
+    plantDots.forEach((d) => d.setAttribute("aria-pressed", String(d.dataset.plant === name)));
+  }
+  try {
+    applyPlant(localStorage.getItem(PLANT_KEY));
+  } catch (e) {
+    applyPlant(null);
+  }
+  plantDots.forEach((dot) => {
+    dot.title = `${dot.getAttribute("aria-label")}: recolour the plants`;
+    dot.addEventListener("click", () => {
+      const next = root.getAttribute("data-plant") === dot.dataset.plant ? null : dot.dataset.plant;
+      applyPlant(next);
+      try {
+        if (next) localStorage.setItem(PLANT_KEY, next);
+        else localStorage.removeItem(PLANT_KEY);
+      } catch (e) {
+        /* storage blocked: the colour still changes on this page */
+      }
+    });
+  });
+
   const navBtn = doc.querySelector(".nav-toggle");
   const nav = doc.getElementById("site-nav");
   if (navBtn && nav) {

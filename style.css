@@ -52,7 +52,6 @@
   --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-sign: "Caveat", "Segoe Script", cursive;
 
   --maxw: 74rem;
   --gutter: clamp(1rem, 4vw, 2rem);
@@ -206,7 +205,12 @@ main { flex: 1; padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem); 
   color: var(--text); text-decoration: none; font: italic 500 1.4rem/1 var(--font-display); letter-spacing: 0.01em;
 }
 .brand:hover { color: var(--text); }
-.brand-mark { color: var(--gold); font-size: 0.95rem; font-style: normal; flex: none; }
+/* Ironwork emblem, used as a mask so it takes the accent colour in both themes */
+.brand-mark {
+  width: 1.45rem; height: 1.45rem; flex: none; background: var(--gold);
+  -webkit-mask: url("assets/img/emblem.png") center / contain no-repeat;
+  mask: url("assets/img/emblem.png") center / contain no-repeat;
+}
 .brand-name small { color: var(--muted); font-size: 0.85em; }
 
 
@@ -341,6 +345,16 @@ h2 .ph, h3 .ph, .card__title .ph { font-size: 0.6em; vertical-align: middle; }
 .ascii--cyan { --ascii-color: var(--cyan); }
 .ascii--line { --ascii-color: var(--line); }
 .ascii--gold { --ascii-color: var(--gold); }
+/* Plant colour picked with the home-page dots; overrides each page's default */
+.ascii { transition: color 0.4s ease, text-shadow 0.4s ease; }
+:root[data-plant="muted"] .ascii { --ascii-color: var(--muted); }
+:root[data-plant="bone"] .ascii { --ascii-color: var(--bone); }
+:root[data-plant="cyan"] .ascii { --ascii-color: var(--cyan); }
+:root[data-plant="pink"] .ascii { --ascii-color: var(--pink); }
+:root[data-plant="line"] .ascii { --ascii-color: var(--line); }
+:root[data-plant="gold"] .ascii { --ascii-color: var(--gold); }
+:root[data-plant="green"] .ascii { --ascii-color: var(--green); }
+:root[data-plant="red"] .ascii { --ascii-color: var(--red); }
 .ascii-caption { margin: 0.5rem 0 0; font: 400 0.7rem/1.4 var(--font-mono); color: var(--muted); }
 .ascii-caption a { color: inherit; }
 
@@ -433,8 +447,14 @@ h2 .ph, h3 .ph, .card__title .ph { font-size: 0.6em; vertical-align: middle; }
 .ff__box dd { margin: 0; color: var(--text); overflow-wrap: anywhere; }
 .ff__box dd a { color: var(--cyan); }
 
-.ff__dots { list-style: none; display: flex; gap: 0.5rem; padding: 0; margin: 1.25rem 0 0.75rem; }
-.ff__dots li { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--c); }
+.ff__dots { display: flex; flex-wrap: wrap; gap: 0.1rem; margin: 1rem 0 0.6rem -0.5rem; }
+.ff__dot {
+  display: grid; place-items: center; width: 1.75rem; height: 1.75rem; padding: 0;
+  background: transparent; border: 1px solid transparent; border-radius: 50%; cursor: pointer;
+}
+.ff__dot::before { content: ""; width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--c); transition: transform 0.15s ease; }
+.ff__dot:hover::before { transform: scale(1.35); }
+.ff__dot[aria-pressed="true"] { border-color: var(--c); }
 .ff__greet { color: var(--pink); margin: 0 0 1rem; font-style: italic; }
 .ff__cta { margin-top: 0.25rem; }
 
@@ -497,7 +517,7 @@ h2 .ph, h3 .ph, .card__title .ph { font-size: 0.6em; vertical-align: middle; }
   padding: 1rem clamp(1rem, 2.5vw, 1.5rem); border-bottom: 1px solid var(--line-soft);
 }
 .id-card__name { display: flex; align-items: center; gap: 0.75rem; margin: 0; font: 500 clamp(2.4rem, 6vw, 3.6rem)/1 var(--font-display); letter-spacing: 0.08em; text-transform: uppercase; }
-.id-card__name .brand-mark { font-size: 0.5em; }
+.id-card__name .brand-mark { width: 0.8em; height: 0.8em; }
 .id-card__id { margin: 0; font: 400 0.78rem var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 .id-card__row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); border-bottom: 1px solid var(--line-soft); }
 .id-card__row:last-child { border-bottom: 0; }
@@ -528,7 +548,6 @@ h2 .ph, h3 .ph, .card__title .ph { font-size: 0.6em; vertical-align: middle; }
 
 .id-side { display: grid; gap: clamp(1rem, 2.5vw, 1.5rem); }
 .id-side .panel { display: flex; flex-direction: column; }
-.signature { margin: 0.25rem 0 0; font: 600 clamp(2.2rem, 5vw, 2.8rem)/1.1 var(--font-sign); color: var(--gold); transform: rotate(-4deg); transform-origin: left; }
 
 /* 9. Project case-study pages --------------------------------------------- */
 .crumbs { font: 400 0.8rem var(--font-mono); color: var(--muted); margin-bottom: 1rem; }

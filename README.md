@@ -87,7 +87,7 @@ To update the game, rebuild in Unity and replace the contents of `play/Komms/`:
 
 ### Your CV
 
-Replace `assets/cv/Shirli-Irenimofe-Williams-CV.pdf` with your real CV, using **the same file name**. The current file is a one-page placeholder.
+Your CV is `assets/cv/Shirli_Williams_CV_Techpriv.pdf`. To update it, replace that file. If you use a new file name, also change `cv:` under `links` in `data.js`, and the two `href="assets/cv/..."` links in `index.html` and `cv.html`.
 
 ---
 
@@ -183,7 +183,7 @@ GitHub's official guide is [Managing a custom domain for your GitHub Pages site]
 - [ ] Email address is correct and the Copy button works on the Contact page.
 - [ ] GitHub and LinkedIn links open the right profiles.
 - [ ] Each project's Live and Code links point to the right place.
-- [ ] Real CV PDF uploaded with the same file name, and the Download button works.
+- [ ] Real CV PDF in `assets/cv/`, and the Download button works.
 - [ ] Every image has useful alt text.
 - [ ] No technologies, claims or numbers you can't back up.
 - [ ] Nothing private: no API keys, passwords, home address or phone number in any file.
@@ -209,4 +209,4 @@ All botanical ASCII art was generated from public-domain images on Wikimedia Com
 - *Palma Thebaica* (doum palm): Richard Pococke, 1743. [Source](https://commons.wikimedia.org/wiki/File:Palma_Thebaica_-_Pococke_Richard_-_1743.jpg)
 - *Elaeis guineensis* (oil palm): Franz Eugen Köhler, *Köhler's Medizinal-Pflanzen*, 1887. [Source](https://commons.wikimedia.org/wiki/File:Elaeis_guineensis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-056.jpg)
 
-Fonts come from Google Fonts: Cormorant Garamond, IBM Plex Sans, JetBrains Mono and Caveat, all under the SIL Open Font License.
+Fonts come from Google Fonts: Cormorant Garamond, IBM Plex Sans and JetBrains Mono, all under the SIL Open Font License.
