@@ -36,7 +36,7 @@ window.SITE = {
     github: "https://github.com/Mof3x",
     linkedin: "https://www.linkedin.com/in/mofe-williams/",
     // Replace this file with your real CV, keeping the same name (or update the path).
-    cv: "assets/cv/Shirli-Irenimofe-Williams-CV.pdf",
+    cv: "assets/cv/Shirli_Williams_CV_Techpriv.pdf",
   },
 
   // Greeting under the home-page terminal, picked by the visitor's local time.
