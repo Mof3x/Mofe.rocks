@@ -19,7 +19,7 @@
 
 window.SITE = {
   person: {
-    name: "Shirli Irenimofe Williams",
+    name: "Shirli Williams",
     shortName: "Shirli",
     role: "Computer Science Graduate",
     focus: "Websites and applications",
@@ -49,7 +49,7 @@ window.SITE = {
   about: {
     // Your photo or illustration, e.g. "assets/img/shirli.jpg" (portrait, roughly 4:5).
     photo: "assets/img/mofeprofessionalprofile.jpg",
-    photoAlt: "Portrait of Shirli Irenimofe Williams",
+    photoAlt: "Portrait of Shirli Williams",
     bio: [
       "I am a computer science graduate with a deep appreciation for logic, a passion for creativity and a skill for combining the two. I got into computer science specifically because of its wide array of applications and limitless potential for innovation.",
       "I enjoy problem solving and systems analysis, and I am constantly seeing new ways to improve and optimize systems and bolster their structure across a wide range of domains. I am a strong advocate for accessibility and inclusivity in technology, as well as the importance of secure, ethical and responsible design and development. I am always looking for new ways to learn, grow and improve my skills, and I am excited to see where my career in computer science will take me.",
