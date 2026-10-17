@@ -53,6 +53,7 @@
         <p class="term__line"><span class="term__prompt">PS C:\Creators\shirli&gt;</span> <span class="term__cmd">fastfetch</span></p>
 
         <div class="ff">
+          <div class="ff__art-col">
           <figure class="ascii-figure ff__art-wrap orbit" style="margin:0">
 <pre class="ascii ff__art ascii--lime" role="img" aria-label="ASCII art of an oil palm tree">                       :=
                        :*+:  =-  ..-++=
@@ -107,6 +108,13 @@
                        .:--::--:</pre>
             <figcaption class="ascii-caption">fig. I · Elaeis guineensis, oil palm · after Köhler, 1887</figcaption>
           </figure>
+            <!-- Colour dots: each one recolours the ASCII plants on every page. Press the lit dot again to reset. -->
+            <div class="ff__dots" role="group" aria-labelledby="dots-label">
+              <span class="ff__dots-label" id="dots-label">Recolour the plants</span>
+              <button type="button" class="ff__dot" data-plant="muted" style="--c: var(--muted)" aria-pressed="false" aria-label="Grey"></button><button type="button" class="ff__dot" data-plant="bone" style="--c: var(--bone)" aria-pressed="false" aria-label="Bone"></button><button type="button" class="ff__dot" data-plant="cyan" style="--c: var(--cyan)" aria-pressed="false" aria-label="Teal"></button><button type="button" class="ff__dot" data-plant="pink" style="--c: var(--pink)" aria-pressed="false" aria-label="Rose"></button>
+              <button type="button" class="ff__dot" data-plant="line" style="--c: var(--line)" aria-pressed="false" aria-label="Lavender"></button><button type="button" class="ff__dot" data-plant="gold" style="--c: var(--gold)" aria-pressed="false" aria-label="Lilac"></button><button type="button" class="ff__dot" data-plant="green" style="--c: var(--green)" aria-pressed="false" aria-label="Green"></button><button type="button" class="ff__dot" data-plant="red" style="--c: var(--red)" aria-pressed="false" aria-label="Red"></button>
+            </div>
+          </div>
 
           <div class="ff__info">
             <p class="ff__hello">Hello World, <span>I am</span></p>
@@ -142,11 +150,6 @@
               </dl>
             </div>
 
-            <!-- Colour dots: each one recolours the ASCII plants on every page. Press the lit dot again to reset. -->
-            <div class="ff__dots" role="group" aria-label="Colour the ASCII plants">
-              <button type="button" class="ff__dot" data-plant="muted" style="--c: var(--muted)" aria-pressed="false" aria-label="Grey"></button><button type="button" class="ff__dot" data-plant="bone" style="--c: var(--bone)" aria-pressed="false" aria-label="Bone"></button><button type="button" class="ff__dot" data-plant="cyan" style="--c: var(--cyan)" aria-pressed="false" aria-label="Teal"></button><button type="button" class="ff__dot" data-plant="pink" style="--c: var(--pink)" aria-pressed="false" aria-label="Rose"></button>
-              <button type="button" class="ff__dot" data-plant="line" style="--c: var(--line)" aria-pressed="false" aria-label="Lavender"></button><button type="button" class="ff__dot" data-plant="gold" style="--c: var(--gold)" aria-pressed="false" aria-label="Lilac"></button><button type="button" class="ff__dot" data-plant="green" style="--c: var(--green)" aria-pressed="false" aria-label="Green"></button><button type="button" class="ff__dot" data-plant="red" style="--c: var(--red)" aria-pressed="false" aria-label="Red"></button>
-            </div>
             <p class="ff__greet" data-greeting>Thanks for stopping by.</p>
             <div class="btn-row ff__cta">
               <a class="btn btn--primary" href="projects.html">View projects <span class="arrow" aria-hidden="true">→</span></a>

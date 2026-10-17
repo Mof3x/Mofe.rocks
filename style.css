@@ -447,7 +447,10 @@ h2 .ph, h3 .ph, .card__title .ph { font-size: 0.6em; vertical-align: middle; }
 .ff__box dd { margin: 0; color: var(--text); overflow-wrap: anywhere; }
 .ff__box dd a { color: var(--cyan); }
 
-.ff__dots { display: flex; flex-wrap: wrap; gap: 0.1rem; margin: 1rem 0 0.6rem -0.5rem; }
+/* Plant column: the hero plant with its recolour dots underneath */
+.ff__art-col { align-self: center; display: flex; flex-direction: column; align-items: center; }
+.ff__dots { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.1rem; margin: 0.9rem 0 0; }
+.ff__dots-label { flex-basis: 100%; margin-bottom: 0.15rem; text-align: center; font: 400 0.68rem var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 .ff__dot {
   display: grid; place-items: center; width: 1.75rem; height: 1.75rem; padding: 0;
   background: transparent; border: 1px solid transparent; border-radius: 50%; cursor: pointer;
@@ -455,7 +458,7 @@ h2 .ph, h3 .ph, .card__title .ph { font-size: 0.6em; vertical-align: middle; }
 .ff__dot::before { content: ""; width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--c); transition: transform 0.15s ease; }
 .ff__dot:hover::before { transform: scale(1.35); }
 .ff__dot[aria-pressed="true"] { border-color: var(--c); }
-.ff__greet { color: var(--pink); margin: 0 0 1rem; font-style: italic; }
+.ff__greet { color: var(--pink); margin: 1.2rem 0 1rem; font-style: italic; }
 .ff__cta { margin-top: 0.25rem; }
 
 /* Typing intro: output hidden until the command finishes (JS only). */

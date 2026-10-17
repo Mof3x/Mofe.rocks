@@ -125,12 +125,12 @@ window.SITE = {
       ],
     },
     {
-      role: "Project Management Intern",
+      role: "Software Engineering Intern",
       organisation: "Publicis Sapient",
       dates: "Jun 2022 – Aug 2022",
       details: [
-        "Built the front end of a self-building, AI-powered ERP dashboard integrating multiple company accounts to speed up transactions, focusing on JSON and RESTful APIs.",
-        "Led a cross-functional team to deliver a working prototype, presented to company executives.",
+        "Contributed to the front end of a self-building, AI-powered ERP dashboard integrating multiple company accounts to speed up transactions, focusing on JSON and RESTful APIs.",
+        "Participated in a cross-functional team to deliver a working prototype, presented to company executives.",
         "Completed intensive training in Agile project management and digital business strategy.",
       ],
     },
